@@ -4,7 +4,7 @@ import { useEffect, useState } from "react"
 import Image from "next/image"
 import Link from "next/link"
 
-export default function postDetail({ params }: { params: { id: string } }) {
+export default function PostDetail({ params }: { params: { id: string } }) {
     const [post, setPost] = useState({})
     const [relatedPost, setRelatedPost] = useState([])
 

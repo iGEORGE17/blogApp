@@ -26,12 +26,12 @@ export function Header() {
 
   useEffect(() => {
 
-    const fetchNavCat = async () => {
+    const FetchNavCat = async () => {
         const res: any = await getCategories();
         setCategories(res)
     }
 
-    fetchNavCat();
+    FetchNavCat();
   },[])
 
    
@@ -62,7 +62,7 @@ export function Header() {
                     <NavigationMenuList>                        
                             {
                                 categories?.map((category) => (
-                                    <NavCategories category={category} />
+                                    <NavCategories key={category?.id} category={category} />
                                 ))
                             }       
                     </NavigationMenuList>
