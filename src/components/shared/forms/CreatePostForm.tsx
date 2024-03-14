@@ -230,7 +230,7 @@ const CreatePostForm = () => {
                         <div className="w-full">    
                             <CldUploadWidget
                                 uploadPreset={process.env.NEXT_PUBLIC_CLOUDINARY_PRESET_NAME}
-                                options={{ folder:"blog"}}                              
+                                options={{ folder:"blogs"}}                              
                                 onSuccess={(result, { widget }) => {
                                     setImageUrl(result?.info?.secure_url);
                                     setPublicId(result?.info?.public_id);

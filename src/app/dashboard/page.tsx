@@ -1,7 +1,7 @@
 "use client"
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert"
 import { useSession } from "next-auth/react"
-
+import Image from "next/image"
 
 export default function Dashboard() {
     const { status, data: session } = useSession()
@@ -10,7 +10,6 @@ export default function Dashboard() {
     <section>
         <div className="p-[3%] lg:flex lg:flex-col gap-3">
             <Alert>
-                {/* <Terminal className="h-4 w-4" /> */}
                 <AlertTitle>Hello {session?.user?.name}</AlertTitle>
                 <AlertDescription>
                     You blog metrics...
@@ -40,7 +39,7 @@ export default function Dashboard() {
                     <div className="stat-figure text-secondary">
                     <div className="avatar online">
                         <div className="w-16 rounded-full">
-                        <img src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" />
+                            <span className="text-xl">{session?.user?.name[0]}</span>
                         </div>
                     </div>
                     </div>

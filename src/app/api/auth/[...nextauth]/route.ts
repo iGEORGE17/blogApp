@@ -1,6 +1,6 @@
 import { prisma } from "@/lib/prisma";
 import { PrismaAdapter } from "@auth/prisma-adapter";
-import NextAuth, { NextAuthOptions } from "next-auth";
+import NextAuth, { AuthOptions } from "next-auth";
 import { Adapter } from "next-auth/adapters";
 import GoogleProvider from "next-auth/providers/google";
 import CredentialsProvider from "next-auth/providers/credentials";
@@ -9,7 +9,7 @@ import bcrypt from "bcryptjs";
 
 
 
-const authOptions: NextAuthOptions = {
+const authOptions: AuthOptions = {
     session: {
         strategy: "jwt"
     },
