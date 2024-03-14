@@ -1,6 +1,4 @@
 "use client"
-
-import * as React from "react"
 import Link from "next/link"
 
 
@@ -18,6 +16,7 @@ import {
   NavigationMenuTrigger,
   navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu"
+import Image from "next/image"
 
 export function Header() {
 
@@ -77,7 +76,7 @@ export function Header() {
                             <div className="w-10 rounded-full">
                             {
                                 session?.user?.image ? 
-                                (<img alt="Tailwind CSS Navbar component" src={session?.user?.image} />)
+                                (<Image alt="Tailwind CSS Navbar component" src={session?.user?.image} width={40} height={40} />)
                                 :
                                 (<>{session?.user?.name[0]}</>)
                             }
