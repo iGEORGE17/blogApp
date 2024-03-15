@@ -1,14 +1,10 @@
 import { prisma } from "@/lib/prisma";
-import getCurrentUser from "@/utils/getCurrentUser";
 import { NextRequest, NextResponse } from "next/server";
 
 
 export async function POST(request: NextRequest) {
 
     try {
-    
-
-    const currentUser = await getCurrentUser();
 
     const { title, tag, content, published, categoryId, imageUrl, publicId, authorId } = await request.json()
 
