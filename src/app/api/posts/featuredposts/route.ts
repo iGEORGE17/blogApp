@@ -1,5 +1,4 @@
 import { prisma } from "@/lib/prisma";
-import getCurrentUser from "@/utils/getCurrentUser";
 import { NextRequest, NextResponse } from "next/server";
 
 
@@ -14,7 +13,7 @@ export async function GET(request: NextRequest) {
             },
             include: {
                 category: true,
-                user: true
+                author: true
             }
         })
 

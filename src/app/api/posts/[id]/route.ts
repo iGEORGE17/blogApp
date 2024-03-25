@@ -48,7 +48,9 @@ export async function PUT(request: NextRequest, { params }: any) {
 
         if(!post) {
             return NextResponse.json({ message: "An error occurred...." }, { status: 400 })
-        }        
+        }  
+        
+        
 
         const updatedPost = await prisma.post.update({
             where: {
