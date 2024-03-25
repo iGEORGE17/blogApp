@@ -23,7 +23,7 @@ const authOptions: AuthOptions = {
             },
             async authorize(credentials:any, req) {
 
-            const user = await prisma.user.findUnique({
+            const user: any = await prisma.user.findUnique({
                 where: {
                     email: credentials?.email
                 }
