@@ -30,7 +30,7 @@ const authOptions: AuthOptions = {
             })
 
             if (!user) {
-                return null
+                throw new Error("invalid email")
             } 
 
             // checkpassword
