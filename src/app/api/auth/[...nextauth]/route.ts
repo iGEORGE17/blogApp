@@ -34,7 +34,7 @@ const authOptions: AuthOptions = {
             } 
 
             // checkpassword
-            const passChk = bcrypt.compareSync(credentials?.password, user?.password)
+            const passChk = bcrypt.compareSync(credentials?.password, user.password)
 
             if(!passChk) {
                 throw new Error("invalid login")
