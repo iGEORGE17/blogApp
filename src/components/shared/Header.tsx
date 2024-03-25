@@ -72,8 +72,8 @@ export function Header() {
                     status === 'authenticated' ? 
                     (
                     <div className="dropdown dropdown-end">
-                        <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar">
-                            <div className="w-10 rounded-full">                        
+                        <div tabIndex={0} role="button" className="btn btn-primary btn-circle avatar lg:flex lg:justify-center lg:items-center">
+                            <div className="w-8 flex lg:justify-center lg:items-center font-bold text-2xl">                        
                                 {session?.user?.name[0]}                            
                             </div>
                         </div>
