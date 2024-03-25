@@ -19,30 +19,30 @@ export const getAllPosts = async () => {
 
 
 // create post 
-export const createPost = async(data:any) => {
+// export const createPost = async(data:any) => {
     
-    await prisma.post.create({
-    data: {
-        title:data.title,
-        tag: data.tag,
-        content: data.content,
-        imageUrl: data.imageUrl,
-        category: {
-            connect: {
-                id: data.categoryId
-            }
-        },
-        author: {
-            connect: {
-                id: data.authorId
-            }
-        },
-        featured: data.featured,
-        published: data.published
-    }
+//     await prisma.post.create({
+//     data: {
+//         title:data.title,
+//         tag: data.tag,
+//         content: data.content,
+//         imageUrl: data.imageUrl,
+//         category: {
+//             connect: {
+//                 id: data.categoryId
+//             }
+//         },
+//         author: {
+//             connect: {
+//                 id: data.authorId
+//             }
+//         },
+//         featured: data.featured,
+//         published: data.published
+//     }
 
-})
-}
+// })
+// }
 
 
 // get post by id
