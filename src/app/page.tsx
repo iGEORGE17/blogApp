@@ -35,7 +35,7 @@ export default function Home() {
             ):
             ( 
               posts?.map((post) => (
-                  <PostItem post={post} />
+                  <PostItem key={post?.id} post={post} />
               ))                
             )
           }

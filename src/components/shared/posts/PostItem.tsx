@@ -18,7 +18,7 @@ const PostItem = ({ post }: any) => {
 
     const { id, title, tag, content, category, author } = post || {}
   return (
-    <Link key={id} href={`/posts/${id}`}>
+    <Link href={`/posts/${id}`}>
         <Card>
             <CardHeader>
                 <CardTitle>{title}</CardTitle>

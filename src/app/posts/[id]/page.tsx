@@ -31,12 +31,12 @@ export default function PostDetail({ params }: { params: { id: string } }) {
   return (
     <section className="flex min-h-screen lg:flex-col w-full">
         <div className="mx-[5%] py-[6%]">
-            <div className="flex lg:justify-between lg:items-stretch lg:gap-6 w-full">
+            <div className="lg:flex lg:justify-between lg:items-stretch lg:gap-6 w-full">
                 <div className="lg:w-9/12 ">
                     <h1 className="text-3xl font-bold">{post?.title}</h1>
                     <hr className="my-2" />
                     <div className="relative">
-                        <Image src={post?.imageUrl} alt={post?.title} width={800} height={450} className="" />
+                        <Image src={post?.imageUrl} width={800} height={450} className="" alt="post image" />
                     </div>
                     <hr className="my-2" />
                     <p className="leading-9">{post?.content}</p>
