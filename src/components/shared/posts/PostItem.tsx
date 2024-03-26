@@ -14,9 +14,33 @@ import {
 import { Switch } from "@/components/ui/switch"
 import Link from "next/link"
 
-const PostItem = ({ post }: any) => {
 
-    const { id, title, tag, content, category, author } = post || {}
+interface ICategory {
+    id: string;
+    name: string;
+}
+
+interface IUser {
+    id: string;
+    name: string;
+}
+
+
+export interface IPost {
+    id: string;
+    title: string;
+    tag: string;
+    imageUrl?: string;
+    content: string;
+    category: ICategory;
+    author: IUser;
+}
+
+
+
+
+
+const PostItem = ({ id, title, tag, content, category, author }: IPost) => {
   return (
     <Link href={`/posts/${id}`}>
         <Card>

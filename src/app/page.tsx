@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import { getAllPosts } from "./actions/posts";
 import { useEffect, useState } from "react";
-import PostItem from "@/components/shared/posts/PostItem";
+import PostItem, { IPost } from "@/components/shared/posts/PostItem";
 import { prisma } from "@/lib/prisma";
 import Link from "next/link";
 
@@ -34,8 +34,8 @@ export default function Home() {
               </div>
             ):
             ( 
-              posts?.map((post) => (
-                  <PostItem key={post?.id} post={post} />
+              posts?.map(({id, title, tag, content, category, author}:IPost ) => (
+                  <PostItem key={id} id={id} title={title} tag={tag} content={content} category={category} author={author} />
               ))                
             )
           }
