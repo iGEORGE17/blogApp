@@ -40,9 +40,7 @@ export default function Dashboard() {
                     <div className="avatar online">
                         <div className="w-16 rounded-full">
                             {
-                                status == "authenticated" && session?.user != null ?
-                            
-                                <span className="text-xl">{session?.user?.name[0]}</span> : null
+                                session && session.user && <span className="text-xl">session?.user?.name[0]</span>
                             }
                         </div>
                     </div>
