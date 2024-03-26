@@ -33,16 +33,13 @@ export default function Home() {
                 <h1 className="text-3xl font-bold">No Posts Currently</h1>
               </div>
             ):
-          ( 
-            posts?.map((post) => (
-              <Link key={post} href={`/posts/${post.id}`}>
-                <PostItem post={post} />
-              </Link>
-            ))                
-          )
+            ( 
+              posts?.map((post) => (
+                  <PostItem post={post} />
+              ))                
+            )
           }
         </div>
-
       </div>
     </section>
   );
