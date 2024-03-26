@@ -42,7 +42,7 @@ export default function Dashboard() {
                             {
                                 status == "authenticated" && session?.user != null ?
                             
-                                <span className="text-xl">{session.user?.name[0]}</span> : null
+                                <span className="text-xl">{session?.user?.name[0]}</span> : null
                             }
                         </div>
                     </div>
