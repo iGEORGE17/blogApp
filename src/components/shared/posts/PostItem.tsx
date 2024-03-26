@@ -30,7 +30,7 @@ export interface IPost {
     id: string;
     title: string;
     tag: string;
-    imageUrl: string;
+    imageUrl?: string;
     content: string;
     category: ICategory;
     author: IUser;
