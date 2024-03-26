@@ -37,7 +37,7 @@ export default function PostDetail({ params }: { params: { id: string } }) {
                     <h1 className="text-3xl font-bold">{post?.title}</h1>
                     <hr className="my-2" />
                     <div className="relative">
-                        <Image src={post?.imageUrl} width={800} height={450} className="" alt="post image" />
+                        <Image src={post?.imageUrl!} width={800} height={450} className="" alt="post image" />
                     </div>
                     <hr className="my-2" />
                     <p className="leading-9">{post?.content}</p>
