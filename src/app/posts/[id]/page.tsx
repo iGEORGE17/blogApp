@@ -3,9 +3,10 @@ import { getPostById, getRelatedPosts } from "@/app/actions/posts"
 import { useEffect, useState } from "react"
 import Image from "next/image"
 import Link from "next/link"
+import { IPost } from "@/components/shared/posts/PostItem"
 
 export default function PostDetail({ params }: { params: { id: string } }) {
-    const [post, setPost] = useState({})
+    const [post, setPost] = useState<IPost>()
     const [relatedPost, setRelatedPost] = useState([])
 
     const { id } = params;
@@ -14,12 +15,12 @@ export default function PostDetail({ params }: { params: { id: string } }) {
     useEffect(() => {
 
         const fetchPostById = async() => {
-            const res = await getPostById(id);
+            const res: any = await getPostById(id);
             setPost(res)
         }
 
         const fetchRelatedPosts = async() => {
-            const res = await getRelatedPosts(id)
+            const res: any = await getRelatedPosts(id)
             setRelatedPost(res)
         }
 
@@ -45,7 +46,7 @@ export default function PostDetail({ params }: { params: { id: string } }) {
                     <h1 className="font-bold">Related Posts</h1>
                     <hr className="" />
                     {
-                        relatedPost.map((rpost) => (
+                        relatedPost.map((rpost: IPost) => (
                             <Link href={`/posts/${rpost.id}`} key={rpost?.id}>
                                 <div className="">
                                     <h1 className="text-sm font-bold">{rpost?.title}</h1>
