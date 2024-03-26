@@ -30,12 +30,12 @@ export default function Home() {
           {
             posts?.length <= 0 ? (
               <div>
-                <h1>No Posts Currently</h1>
+                <h1 className="text-3xl font-bold">No Posts Currently</h1>
               </div>
             ):
           ( 
             posts?.map((post) => (
-              <Link key={post?.id} href={`/posts/${post.id}`}>
+              <Link key={post} href={`/posts/${post.id}`}>
                 <PostItem post={post} />
               </Link>
             ))                
