@@ -23,7 +23,6 @@ import { zodResolver } from '@hookform/resolvers/zod';
 import * as z from 'zod';
 import Link from "next/link"
 import { Textarea } from "../../ui/textarea"
-import { createPost } from "@/app/actions/posts"
 import { useSession } from "next-auth/react"
 import { useEffect, useState } from "react"
 import { getCategories } from "@/app/actions/categories"
@@ -53,7 +52,6 @@ const CreatePostForm = () => {
     const [imageUrl, setImageUrl] = useState("")
     const [publicId, setPublicId] = useState("")
 
-    // toast({ description: "post image uploaded successfully"})
     
     useEffect(() => {
         const fetchCategories = async () => {
