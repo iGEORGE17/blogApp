@@ -4,9 +4,10 @@ import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import { getAllPosts } from "./actions/posts";
 import { useEffect, useState } from "react";
-import PostItem, { IPost } from "@/components/shared/posts/PostItem";
+import PostItem from "@/components/shared/posts/PostItem";
 import { prisma } from "@/lib/prisma";
 import Link from "next/link";
+import { IPost } from "@/types";
 
 export default function Home() {
   const [posts, setPosts] = useState([])

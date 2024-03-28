@@ -10,12 +10,12 @@ import {
   navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu"
 import Link from "next/link";
+import { ICategory } from "@/types";
 
 
 
-export const NavCategories = ({ category }: any) => {
+export const NavCategories = ({ id, name }: ICategory) => {
 
-    const { id, name } = category || {}
     return(
      <NavigationMenuItem>
         <Link href="" legacyBehavior passHref>

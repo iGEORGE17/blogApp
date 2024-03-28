@@ -17,6 +17,7 @@ import {
   navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu"
 import Image from "next/image"
+import { ICategory } from "@/types"
 
 export function Header() {
 
@@ -60,8 +61,8 @@ export function Header() {
                 <NavigationMenu>
                     <NavigationMenuList>                        
                             {
-                                categories?.map((category) => (
-                                    <NavCategories key={category?.id} category={category} />
+                                categories?.map(({id, name}: ICategory) => (
+                                    <NavCategories key={id} name={name} id={id} />
                                 ))
                             }       
                     </NavigationMenuList>

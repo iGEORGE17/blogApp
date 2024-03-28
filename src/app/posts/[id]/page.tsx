@@ -3,7 +3,8 @@ import { getPostById, getRelatedPosts } from "@/app/actions/posts"
 import { useEffect, useState } from "react"
 import Image from "next/image"
 import Link from "next/link"
-import { IPost } from "@/components/shared/posts/PostItem"
+import { IPost } from "@/types"
+
 
 export default function PostDetail({ params }: { params: { id: string } }) {
     const [post, setPost] = useState<IPost>()
