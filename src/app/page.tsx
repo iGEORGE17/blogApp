@@ -1,5 +1,4 @@
 "use client"
-import DataComponent from "@/components/shared/dataComponent";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import { getAllPosts } from "./actions/posts";
