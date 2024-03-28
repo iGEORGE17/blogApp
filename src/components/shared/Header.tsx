@@ -70,12 +70,12 @@ export function Header() {
             </div>
             <div className="navbar-end">
                 {
-                    status === 'authenticated' ? 
+                    session ? 
                     (
                     <div className="dropdown dropdown-end">
                         <div tabIndex={0} role="button" className="btn btn-primary btn-circle avatar lg:flex lg:justify-center lg:items-center">
                             <div className="w-8 flex lg:justify-center lg:items-center font-bold text-2xl">                        
-                                {session?.user?.name[0]}                            
+                                <span className="text-xl">{session.user?.name![0]}</span>                                                       
                             </div>
                         </div>
                         <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">

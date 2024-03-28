@@ -37,13 +37,11 @@ export default function Dashboard() {
                 
                 <div className="stat">
                     <div className="stat-figure text-secondary">
-                    <div className="avatar online">
-                        <div className="w-16 rounded-full">
-                            {
-                                session && session.user && <span className="text-xl">session?.user?.name[0]</span>
-                            }
+                        <div className="avatar online">
+                            <div className="w-16 rounded-full">
+                                <span className="text-xl">{session?.user?.name![0]}</span>
+                            </div>
                         </div>
-                    </div>
                     </div>
                     <div className="stat-value">86%</div>
                     <div className="stat-title">Tasks done</div>
